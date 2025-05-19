@@ -54,3 +54,15 @@ fn median(v: &mut Vec<usize>) -> usize {
  
 
 } 
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn checks_median() {
+        let mut   v = vec![0,2,4,5,6];
+        let result = median(&mut v);
+        assert_eq!(result, 4);
+    } }
